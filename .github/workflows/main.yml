@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04  # Use Ubuntu 20.04 to support missing dependencies
+    runs-on: ubuntu-latest  # Use Ubuntu 20.04 to support missing dependencies
 
     steps:
       - uses: actions/checkout@v4

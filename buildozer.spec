@@ -14,5 +14,5 @@ android.ndk = 25b
 android.foreground = True
 
 # ✅ Enable faster builds
-android.p4a_dir = $HOME/.buildozer/android/platform/python-for-android
+p4a.android_dir = $HOME/.buildozer/android/platform/python-for-android
 android.accept_sdk_license = True

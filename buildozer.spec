@@ -1,18 +1,30 @@
 [app]
-title = ashwatt
-package.name = ashuapp
-package.domain = com.yourdomain
-source.include_exts = py,png,jpg,kv
-source.include_patterns = assets/*.jpg
-source.exclude_exts = spec
-version = 1.0
-requirements = python3,kivy,kivymd,,urllib3
-android.permissions = INTERNET
-android.api = 33  # Android 15
-android.minapi = 21
-android.ndk = 25b
-android.foreground = True
 
-# ✅ Enable faster builds
-p4a.android_dir = $HOME/.buildozer/android/platform/python-for-android
-android.accept_sdk_license = True
+title = ASHU APP
+package.name = basicapp
+package.domain = net.aesencryptornl
+source.dir = .
+source.include_exts = py,png,jpg,txt,kv,atlas,json
+source.include_patterns = assets/*.jpg
+requirements = python3,kivy
+version = 0.1
+orientation = portrait
+
+[buildozer]
+
+log_level = 2
+warn_on_root = 1
+
+[buildozer.android]
+
+fullscreen = 0
+android.minapi = 21
+android.api = 33
+android.ndk = 19b
+android.sdk = 24
+android.permissions = INTERNET
+android.arch = arm64-v8a, armeabi-v7a
+android.entrypoint = org.kivy.android.PythonActivity
+android.manifest.theme = @android:style/Theme.NoTitleBar
+android.update_sdk = True
+android.javac_target = 1.8

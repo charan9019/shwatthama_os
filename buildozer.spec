@@ -1,12 +1,12 @@
 [app]
 
-title = ASHU APP
+title = Ashwatt App
 package.name = basicapp
 package.domain = net.aesencryptornl
 source.dir = .
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,txt,kv,atlas,json
 source.include_patterns = assets/*.jpg
-requirements = python3,kivy
+requirements = python3,kivy,android,pyjnius
 version = 0.1
 orientation = portrait
 
@@ -18,14 +18,12 @@ warn_on_root = 1
 [buildozer.android]
 
 fullscreen = 0
+android.api = 34
 android.minapi = 21
-android.api = 33
 android.ndk = 19b
 android.sdk = 24
-android.permissions = INTERNET
+android.permissions = WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
 android.arch = arm64-v8a, armeabi-v7a
-android.gradle_dependencies = androidx.core:core:1.10.1
-android.fileprovider = True
 android.entrypoint = org.kivy.android.PythonActivity
 android.manifest.theme = @android:style/Theme.NoTitleBar
 android.update_sdk = True
